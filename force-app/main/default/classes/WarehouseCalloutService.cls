@@ -6,7 +6,7 @@ public with sharing class WarehouseCalloutService implements Queueable{
         getWareHouseRecords();
     }
     @Future(CallOut=true)
-    private static void getWareHouseRecords() {
+    public static void getWareHouseRecords() {
         Http http = new Http();
         HttpRequest request = new HttpRequest();
         request.setMethod('GET');
